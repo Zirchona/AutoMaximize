@@ -25,10 +25,10 @@ function onError(error) {
 }
 
 function updateWindow(window) {
-    browser.windows.update(window.id, {state: "fullscreen"});
+    browser.windows.update(window.id, {state: "maximized"});
 }
 
-console.log(`AutoFullscreen Running`);
+console.log(`AutoMaximize Running`);
 browser.windows.getAll().then((windowInfoArray) => {
     for (const currentWindow of windowInfoArray) {
         updateWindow(currentWindow)
